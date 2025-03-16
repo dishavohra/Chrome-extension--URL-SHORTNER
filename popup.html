@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="spectre.min.css">
+    <style>
+        body {
+            width: 300px;
+            padding: 10px;
+            text-align: center;
+        }
+        input {
+            width: 80%;
+            margin-bottom: 10px;
+        }
+        button {
+            margin: 5px;
+        }
+        #copyMessage {
+            color: green;
+            display: none;
+        }
+        #shortenedUrl {
+            display: none; /* Initially hidden until a URL is generated */
+            word-break: break-all;
+            cursor: pointer;
+            color: green ;
+            text-decoration: underline;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h3>URL Shortener</h3>
+    
+    <!-- Input for the URL -->
+    <input type="text" id="urlInput" placeholder="Enter URL here">
+    <button id="shortenBtn" class="btn btn-primary">Shorten</button>
+    
+    <br>
+
+    <!-- Shortened URL (hidden by default, only appears after generation) -->
+    <a id="shortenedUrl" href="#"></a>
+    <p id="copyMessage">Copied!</p>
+
+    <script src="popup.js"></script>
+</body>
+</html>
